@@ -19,7 +19,7 @@ raw_data <- tq_get(symbols, from = today() - years(10), to = today()) %>%
   mutate(month = month(date, label = TRUE, abbr = TRUE),
          year = year(date))
 
-# 3. STATISTICAL CALCULATIONS (WOW THIS IS SO COMPLEX)
+# 3. STATISTICAL CALCULATIONS
 monthly_stats <- raw_data %>%
   group_by(month) %>%
   summarise(
